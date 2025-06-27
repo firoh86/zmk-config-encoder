@@ -3,16 +3,16 @@
 / {
     encoder0: ttc_encoder {
         compatible = "alps,ec11";
-        a-gpios = <&gpio0 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  
-        b-gpios = <&gpio0 08 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; 
-        steps = 48>;  // usual para TTC Green Core
+        a-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  
+        b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; 
+        steps = 20>;  
         status = "okay";
     };
 
     sensors: sensor {
         compatible = "zmk,keymap-sensors";
-        sensors = <encoder0>;
-        triggers-per-rotation = <24>;
+        sensors = <&encoder0>;
+        triggers-per-rotation = <80>;
     };
 
 };

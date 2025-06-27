@@ -10,7 +10,7 @@
 				&kp TAB   &kp Q  
 			>;
 
-			sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+			sensor-bindings = <&inc_dec_kp KP_N0 KP_N1>;
 		};
     };
 };
