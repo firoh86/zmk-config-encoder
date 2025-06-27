@@ -1,2 +1,19 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        layers {
+            default {
+                bindings = <
+                    &kp KC_A  // puedes cambiar esto según tus teclas
+                    &kp KC_B
+                >;
+
+                sensor-bindings = <&inc_dec_kp KC_VOLD KC_VOLU>;
+            };
+        };
+    };
+};

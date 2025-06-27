@@ -1,1 +1,18 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    encoder0: ttc_encoder {
+        compatible = "alps,ec11";
+        label = "TTC_GREEN";
+        a-gpios = <&gpio0 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        b-gpios = <&gpio0 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+        steps = <24>;         // Usa 20 o 24 según el número real de detents del encoder
+        resolution = <1>;
+        input-events = <INPUT_REL REL_DIAL>;
+    };
+
+    sensors {
+        compatible = "zmk,input-sensors";
+        sensor-inputs = <&encoder0>;
+    };
+};
