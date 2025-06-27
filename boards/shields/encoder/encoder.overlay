@@ -5,7 +5,7 @@
         compatible = "alps,ec11";
         a-gpios = <&gpio0 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  
         b-gpios = <&gpio0 08 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; 
-        steps = 12>;  // usual para TTC Green Core
+        steps = 48>;  // usual para TTC Green Core
         status = "okay";
     };
 
