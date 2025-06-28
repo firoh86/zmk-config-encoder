@@ -2,17 +2,17 @@
 
 / {
     encoder0: ttc_encoder {
-        compatible = "alps,ec11";
+        compatible = "alps,ec11"
+        label = "encoder";
         a-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;  
         b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; 
         steps = <4>;  
         status = "okay";
     };
 
-    sensors: sensor {
+     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder0>;
-        triggers-per-rotation = <20>;
     };
 
 };
