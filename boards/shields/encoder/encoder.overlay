@@ -19,6 +19,7 @@
     };>;
         steps = <36>;
                status = "disabled";
+               
     };
 
         sensors: sensors {
